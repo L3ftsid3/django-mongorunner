@@ -12,7 +12,7 @@ class TestRunner(DjangoTestSuiteRunner):
 
         db_name = 'testsuite'
         connect(db_name)
-        print 'Creating test-database: ' + db_name
+        print ('Creating test-database: ' + db_name)
 
         return db_name
 
@@ -20,7 +20,7 @@ class TestRunner(DjangoTestSuiteRunner):
         from pymongo import Connection
         conn = Connection()
         conn.drop_database(db_name)
-        print 'Dropping test-database: ' + db_name
+        print ('Dropping test-database: ' + db_name)
 
 
 class TestCase(TransactionTestCase):
